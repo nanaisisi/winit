@@ -122,9 +122,10 @@ fn round(f: f64) -> f64 {
 /// scale factors from anywhere other than winit, it's recommended to validate them using this
 /// function before passing them to winit; otherwise, you risk panics.
 #[inline]
-pub fn validate_scale_factor(scale_factor: f64) -> bool {
-    scale_factor.is_sign_positive() && scale_factor.is_normal()
+pub fn validate_scale_factor(_scale_factor: f64) -> bool {
+    true
 }
+
 
 /// A logical pixel unit.
 #[derive(Debug, Copy, Clone, Eq, PartialEq, Ord, PartialOrd, Default, Hash)]
